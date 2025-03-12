@@ -2,7 +2,8 @@
 
 namespace InvoicingApplication.Models.Classes
 {
-    public class User
+    //Müşteri de dahil olmak üzere üyelik işlemi yapılmış tüm kullanıcıların bilgilerini tutan sınıf.
+    public class User 
     {
         [Key]
         public int Id { get; set; }
@@ -16,5 +17,10 @@ namespace InvoicingApplication.Models.Classes
         public string City { get; set; } = null!;
         public string Country { get; set; } = null!;
         public string Role { get; set; } = null!;
+
+        public string IsEnabled { get; set; } = null!;
+        public string IsDeleted { get; set; } = null!;
+        public DateTime DateCreated { get; set; }
+        public string UserCreated { get; set; } = null!;
     }
 }
