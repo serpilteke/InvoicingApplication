@@ -28,7 +28,11 @@ namespace InvoicingApplication.Models.Classes
         public string ReceiverPhoneNumber { get; set; } = null!;
         public string ReceiverEmail { get; set; } = null!;
         public string PaymentMethod { get; set; } = null!;
-        public ICollection<InvoiceItem> InvoiceItems { get; set; } = null!;
+        public ICollection<InvoiceItem> InvoiceItems { get; set; } = null!;//bir faturanın birden fazla fatura kalemi olabilir.
+        public Customers Customers { get; set; } = null!;//bir fatura bir müşteriye ait olabilir.
+        public Countrys Countrys { get; set; } = null!;//bir fatura bir ülkeye ait olabilir.
+        public Citys Citys { get; set; } = null!;//bir fatura bir şehre ait olabilir.
+        public Employee Employee { get; set; } = null!;//bir fatura bir çalışana ait olabilir.
 
     }
 }

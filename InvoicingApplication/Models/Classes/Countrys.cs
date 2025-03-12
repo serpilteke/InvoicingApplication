@@ -1,11 +1,14 @@
-﻿namespace InvoicingApplication.Models.Classes
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace InvoicingApplication.Models.Classes
 {
     public class Countrys
     {
+        [Key]
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public string InternationalName { get; set; } = null!;
-        public string CountryNameCode { get; set; } = null!;
+        public string NameCode { get; set; } = null!;
         public string AreaCode { get; set; } = null!;
         public string IsEnabled { get; set; } = null!;
         public string IsDeleted { get; set; } = null!;

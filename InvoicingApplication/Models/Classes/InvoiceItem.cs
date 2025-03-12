@@ -19,5 +19,8 @@ namespace InvoicingApplication.Models.Classes
         public string DateModified { get; set; } = null!;
         public Invoices Invoices { get; set; } = null!; //bir fatura kalemi bir faturaya ait olabilir.
         public Customers Customers { get; set; } = null!; //bir fatura kalemi bir müşteriye ait olabilir.
+        public Employee Employee { get; set; } = null!; //bir fatura kalemi bir çalışana ait olabilir.
+        public Products Products { get; set; } = null!; //bir fatura kalemi bir ürüne ait olabilir.
+
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace InvoicingApplication.Models.Classes
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace InvoicingApplication.Models.Classes
 {
     public class SalesMovement
     {
+        [Key]
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public string Type { get; set; } = null!;

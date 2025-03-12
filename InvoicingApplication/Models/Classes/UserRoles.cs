@@ -2,15 +2,20 @@
 
 namespace InvoicingApplication.Models.Classes
 {
-    public class CustomerType
+    public class UserRoles
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public string Description { get; set; } = null!;
+
+
         public string IsEnabled { get; set; } = null!;
         public string IsDeleted { get; set; } = null!;
         public DateTime DateCreated { get; set; }
-        public ICollection<Customers> Customers { get; set; } = null!;//bir müşteri tipi birden fazla müşteriye ait olabilir.
+        public string UserCreated { get; set; } = null!;
+
+
+        public ICollection<Users> Users { get; set; } = null!; //bir kullanıcı rolü birden fazla kullanıcıya ait olabilir.
+
     }
 }

@@ -2,10 +2,11 @@
 
 namespace InvoicingApplication.Models.Classes
 {
-    public class Customers
+    public class CustomerEmployees
     {
         [Key]
         public int Id { get; set; }
+
 
         [Required(ErrorMessage = "Kullanıcı Ad alanı boş bırakılamaz.")]
         [Display(Name = "Kullanıcı Adı :")]
@@ -26,20 +27,16 @@ namespace InvoicingApplication.Models.Classes
 
         [Required(ErrorMessage = "Telefon alanı boş bırakılamaz.")]
         [Display(Name = "Telefon :")]
-        public string PhoneNumber { get; set; } = null!;
+        public string Phone { get; set; } = null!;
 
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Şifre alanı boş bırakılamaz.")]
         [Display(Name = "Şifre :")]
         [MinLength(6, ErrorMessage = "Şifreniz en az 6 karakter olabilir")]
         public string Password { get; set; } = null!;
-        public string Address { get; set; } = null!;
-        public string CitysId { get; set; } = null!;
-        public string CountrysId { get; set; } = null!;
-        public string WebSite { get; set; } = null!;
 
-        public ICollection<Citys> Citys { get; set; } = null!; //her bir müşteri bir şehre ait olabilir.??
-        public ICollection<Countrys> Countrys { get; set; } = null!;//her bir müşteri bir ülkeye ait olabilir.??
-        
+        public ICollection<Customers> Customers { get; set; } = null!; //her bir çalışan bir müşteriye ait olabilir.??
+
+
     }
 }
