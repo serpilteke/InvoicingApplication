@@ -14,6 +14,7 @@ namespace InvoicingApplication.Models.Classes
         public decimal SalePrice { get; set; }
         public short StockNumber { get; set; }
         public bool StockStatus { get; set; }
+        public int UnitPrice {get; set;}
         public Category Category { get; set; } = null!;
 
         public ICollection<SalesMovement> SalesMovements { get; set; } = null!;// her bir ürünün birden fazla satışı olabilir.
