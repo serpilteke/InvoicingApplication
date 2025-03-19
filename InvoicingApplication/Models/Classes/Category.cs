@@ -2,7 +2,7 @@
 
 namespace InvoicingApplication.Models.Classes
 {
-    public class Category //DB'ye bir tablo oluşturacağımı belirtmek için 
+    public class ProductCategories //DB'ye bir tablo oluşturacağımı belirtmek için 
     {
         //EF temel CRUD işlemlerini gerçekleştirirken mutlaka bir KEY'e ihtiyaç duyar.
         [Key]//Primary Key olduğunu belirtmek için
